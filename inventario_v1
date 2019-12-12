@@ -1,3 +1,5 @@
+# #ansible-playbook -i inventario_v1 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml;
+
 [nodes]
 ocp01.example.com openshift_schedulable=true openshift_node_group_name='node-config-all-in-one'
 ocp02.example.com openshift_schedulable=true openshift_node_group_name='node-config-all-in-one'
