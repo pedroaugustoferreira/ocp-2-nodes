@@ -64,9 +64,9 @@ openshift_deployment_type=openshift-enterprise
 ###   package_availability
 ###   package_update
 
-openshift_master_default_subdomain=subdomain.ocp.example.com
+openshift_master_default_subdomain=apps.ocp.example.com # minhas aplicaçãoes exemplo: teste-http.subdomain.ocp.example.com
 openshift_master_cluster_hostname=internal.ocp.example.com
-openshift_master_cluster_public_hostname=app.ocp.example.com
+openshift_master_cluster_public_hostname=cl.ocp.example.com # cluster console, aplication console, service catalog
 openshift_master_cluster_method=native
 
 openshift_master_min_tls_version=VersionTLS12
@@ -163,7 +163,7 @@ openshift_hosted_registry_replicas=1
 openshift_hosted_manage_registry=true
 openshift_hosted_manage_registry_console=true
 #openshift_hosted_registry_clusterip=172.30.10.10
-openshift_hosted_registry_routehost=registry.ocp.example.com
+openshift_hosted_registry_routehost=registry.apps.example.com
 openshift_hosted_registry_storage_kind=vsphere
 openshift_hosted_registry_storage_access_modes=['ReadWriteOnce']
 openshift_hosted_registry_storage_annotations=['volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/vsphere-volume']
