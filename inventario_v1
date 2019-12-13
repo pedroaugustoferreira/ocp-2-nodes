@@ -1,4 +1,4 @@
-# ansible-playbook -i inventario_v1 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml;
+# #ansible-playbook -i inventario_v1 /usr/share/ansible/openshift-ansible/playbooks/deploy_cluster.yml;
 
 [nodes]
 ocp01.example.com openshift_schedulable=true openshift_node_group_name='node-config-all-in-one'
@@ -47,7 +47,7 @@ oreg_auth_password='eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIyN2U1NWI5YmM4N2Y0ZjY0OWU5Njg
 oreg_test_login=false
 
 #openshift_examples_modify_imagestreams=true
-#openshift_docker_insecure_registries=registry.example.com
+#openshift_docker_insecure_registries=registry.ocp.example.com
 #openshift_docker_blocked_registries=registry.hacker.com
 
 #openshift_deployment_type=origin
