@@ -64,9 +64,9 @@ openshift_deployment_type=openshift-enterprise
 ###   package_availability
 ###   package_update
 
-openshift_master_default_subdomain=apps.example.com
-openshift_master_cluster_hostname=cl.example.com
-openshift_master_cluster_public_hostname=console.example.com
+openshift_master_default_subdomain=subdomain.ocp.example.com
+openshift_master_cluster_hostname=internal.ocp.example.com
+openshift_master_cluster_public_hostname=app.ocp.example.com
 openshift_master_cluster_method=native
 
 openshift_master_min_tls_version=VersionTLS12
@@ -106,14 +106,6 @@ openshift_hosted_router_selector='node-role.kubernetes.io/infra=true'
 openshift_hosted_router_replicas=2
 openshift_hosted_router_extended_validation=true
 
-openshift_hosted_registry_selector='node-role.kubernetes.io/infra=true'
-openshift_hosted_registry_replicas=2
-openshift_hosted_registry_routehost=registry.example.com
-openshift_hosted_registry_clusterip=172.30.255.10
-openshift_hosted_registry_storage_kind=vsphere
-openshift_hosted_registry_storage_volume_size=30Gi
-#openshift_hosted_registry_routecertificates=reencrypt
-#openshift_hosted_registry_routetermination="{'certfile': '<path>/org-cert.pem', 'keyfile': '<path>/org-privkey.pem', 'cafile': '<path>/org-chain.pem'}"
 
 os_sdn_network_plugin_name='redhat/openshift-ovs-networkpolicy'
 #osm_cluster_network_cidr=10.128.0.0/16
@@ -171,12 +163,13 @@ openshift_hosted_registry_replicas=2
 openshift_hosted_manage_registry=true
 openshift_hosted_manage_registry_console=true
 #openshift_hosted_registry_clusterip=172.30.10.10
-openshift_hosted_registry_routehost=registry.example.com
+openshift_hosted_registry_routehost=registry.ocp.example.com
 openshift_hosted_registry_storage_kind=vsphere
 openshift_hosted_registry_storage_access_modes=['ReadWriteOnce']
 openshift_hosted_registry_storage_annotations=['volume.beta.kubernetes.io/storage-provisioner: kubernetes.io/vsphere-volume']
 openshift_hosted_registry_storage_volume_size=50Gi
 openshift_hosted_registry_cert_expire_days=3650
+
 
 # MONITORING
 openshift_cluster_monitoring_operator_install=true
